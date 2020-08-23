@@ -12,4 +12,10 @@ The document assumes that you know how to run selenium tests remotely using the 
      - For example ⇒ http://XXX.XX.XX.X:30001/wd/hub
   - Run your tests with your usual commands - `rspec tests/spec/*`
 - TIP - Write a script to check that the hub’s availability before running test - http://XXX.XX.XX.X:30001/wd/hub/status
+### Debugging 
+- [Download VNC from Chrome](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla?hl=en)
+- Replace POD_NAME with the name of the pod you want to connect to. 
+- kubectl port-forward $POD_NAME 5900:5900 
+- Then connect to localhost:5900 with your VNC client using the password "secret"
+
 
